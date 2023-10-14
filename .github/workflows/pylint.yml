@@ -34,4 +34,5 @@ jobs:
       
     - name: Analysing the code with pylint
       run: |
-        poetry run pylint $(git ls-files '*.py')
+        source .venv/bin/activate
+        pylint $(git ls-files '*.py')
