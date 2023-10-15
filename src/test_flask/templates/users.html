@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title%}Users{% endblock %}
+
+{% block content %}
+  <h1>Users</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>List of users</th>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td>last name</td>
+        <td>age</td>
+        <td>member since</td>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+        <tr>
+            <td>{{user.first_name}}</td>
+            <td>{{user.last_name}}</td>
+            <td>{{user.age}}</td>
+            <td>{{user.member_since}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+    <p>request: <br/>{{ request }}</p>
+
+{% endblock %}
